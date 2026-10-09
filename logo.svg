@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="Prospera Muziek">
+  <g transform="translate(0,-15)">
+    <rect x="0"   y="86" width="14" height="28"  rx="7" fill="#1f3a34"/>
+    <rect x="22"  y="79" width="14" height="42"  rx="7" fill="#1f3a34"/>
+    <rect x="44"  y="83" width="14" height="34"  rx="7" fill="#1f3a34"/>
+    <rect x="66"  y="70" width="14" height="60"  rx="7" fill="#1f3a34"/>
+    <rect x="88"  y="76" width="14" height="48"  rx="7" fill="#1f3a34"/>
+    <rect x="110" y="60" width="14" height="80"  rx="7" fill="#1f3a34"/>
+    <rect x="132" y="48" width="14" height="104" rx="7" fill="#c9a24a"/>
+  </g>
+  <text x="176" y="82" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#1f3a34">Prospera</text>
+  <text x="180" y="114" font-family="system-ui, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="11" fill="#b08a35">MUZIEK</text>
+</svg>
