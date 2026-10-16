@@ -3,10 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prospera Muziek | Privé muziekles aan huis</title>
-<meta name="description" content="Prospera Muziek geeft persoonlijke privé muziekles. Neem contact op voor een proefles.">
+<title>Prospera Muziek | Privé muziekles in Castricum</title>
+<meta name="description" content="Prospera Muziek: privé muziekles in Castricum en online. Piano (vanaf 4 jaar), dwarsfluit, basgitaar, ukulele, muziektheorie en ABRSM-examenvoorbereiding door Yasin Hanonu.">
 <meta name="theme-color" content="#1f3a34">
 <link rel="icon" type="image/svg+xml" href="logo-icon.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicSchool",
+  "name": "Prospera Muziek",
+  "url": "https://prosperamuziek.nl",
+  "telephone": "+31684043720",
+  "areaServed": "Castricum, Noord-Holland",
+  "address": { "@type": "PostalAddress", "addressLocality": "Castricum", "addressCountry": "NL" }
+}
+</script>
 <style>
   :root {
     --bg: #faf7f2;
@@ -52,6 +63,7 @@
   .btn:hover { filter: brightness(1.08); }
   section { padding: 56px 0 8px; }
   h2 { font-size: 1.6rem; margin: 0 0 16px; color: var(--accent); }
+  h3 { margin: 0 0 6px; font-size: 1.1rem; }
   .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
   .card {
     background: var(--card);
@@ -59,13 +71,54 @@
     padding: 22px;
     box-shadow: 0 1px 4px rgba(0,0,0,.07);
   }
-  .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
   .card p { margin: 0; color: var(--muted); }
+
+  /* Over Yasin */
+  .about { display: grid; gap: 28px; grid-template-columns: 1fr; align-items: start; }
+  .about.has-photo { grid-template-columns: 1fr; }
+  .about figure { margin: 0; display: none; }
+  .about.has-photo figure { display: block; }
+  .about figure img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+    display: block;
+  }
+  .about p { margin: 0 0 14px; }
+  .facts { list-style: none; margin: 0; padding: 0; }
+  .facts li { padding: 8px 0 8px 22px; position: relative; border-bottom: 1px solid #ece6da; }
+  .facts li:last-child { border-bottom: 0; }
+  .facts li::before { content: "♪"; position: absolute; left: 0; color: var(--gold); }
+  .sub { margin: 30px 0 12px; font-size: 1.2rem; color: var(--accent); }
+  .meta { color: var(--muted); }
+  @media (min-width: 720px) {
+    .about.has-photo { grid-template-columns: 260px 1fr; }
+  }
+
+  /* Fotogalerij */
+  .gallery { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 0; padding: 0; }
+  .gallery figure { margin: 0; }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.12);
+    display: block;
+    background: #e9e3d6;
+  }
+  .gallery figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); text-align: center; }
+
   .contact { text-align: center; padding-bottom: 64px; }
   .contact .card { max-width: 520px; margin: 0 auto; }
   .contact a { color: var(--accent); font-weight: 600; text-decoration: none; }
   .contact a:hover { text-decoration: underline; }
-  .contact p { margin: 8px 0; }
+  .contact p { margin: 8px 0; color: var(--ink); }
   footer { text-align: center; padding: 22px 0 36px; color: var(--muted); font-size: .9rem; }
 </style>
 </head>
@@ -75,7 +128,7 @@
   <div class="wrap">
     <img class="logo-mark" src="logo-icon.svg" alt="" width="96" height="96">
     <h1>Prospera Muziek</h1>
-    <p>Persoonlijke privé muziekles, in een rustige en prettige sfeer.</p>
+    <p>Persoonlijke privé muziekles in Castricum en online, voor alle leeftijden.</p>
     <a class="btn" href="#contact">Neem contact op</a>
   </div>
 </header>
@@ -83,12 +136,29 @@
 <main class="wrap">
 
   <section id="over">
-    <h2>Over Prospera Muziek</h2>
-    <p>
-      Prospera Muziek is een kleinschalige muziekschool aan huis in Castricum.
-      Ik geef privé les in piano, dwarsfluit, basgitaar, ukelele en muziektheorie, aan kinderen en volwassenen, van beginner tot gevorderd. Pianoles is al mogelijk vanaf 4 jaar.
-      Elke les is afgestemd op jouw niveau, tempo en muzikale wensen.
-    </p>
+    <h2>Over Yasin</h2>
+    <div class="about" id="about">
+      <figure>
+        <img id="yasin-foto" src="yasin.jpg" alt="Yasin Hanonu, docent bij Prospera Muziek" width="520" height="650">
+      </figure>
+      <div>
+        <p>
+          Hallo! Mijn naam is Yasin Hanonu. Ik ben professioneel fluitist, bassist, dirigent en muziekdocent
+          met meer dan 27 jaar ervaring in muziekonderwijs en podiumoptredens. Met veel enthousiasme deel ik mijn
+          passie, kennis en ervaring met leerlingen van alle leeftijden.
+        </p>
+        <p>
+          Iedere leerling is anders. Daarom stem ik mijn lessen af op de leeftijd, het niveau, de interesses en de
+          persoonlijke doelen van de leerling. Mijn lessen combineren een professionele en gestructureerde aanpak met
+          ruimte voor creativiteit, muzikale expressie en vooral plezier in het muziek maken.
+        </p>
+        <p class="meta">
+          🗣️ Les in het Nederlands, Engels en Turks<br>
+          📍 Castricum, Noord-Holland<br>
+          💻 Online lessen ook mogelijk
+        </p>
+      </div>
+    </div>
   </section>
 
   <section id="lessen">
@@ -96,28 +166,81 @@
     <div class="grid">
       <div class="card">
         <h3>🎹 Piano</h3>
-        <p>Les voor alle leeftijden, ook speciaal voor jonge kinderen vanaf 4 jaar. Spelenderwijs leren en een goede basis leggen.</p>
+        <p>Voor kinderen vanaf 4 jaar, jongeren en volwassenen. Spelenderwijs leren en een goede basis leggen.</p>
       </div>
       <div class="card">
         <h3>🎶 Dwarsfluit</h3>
-        <p>Voor beginners en gevorderden, kinderen en volwassenen.</p>
+        <p>Van beginner tot gevorderd.</p>
       </div>
       <div class="card">
         <h3>🎸 Basgitaar</h3>
-        <p>Van de eerste baslijnen tot samenspel met anderen.</p>
+        <p>Techniek, groove en improvisatie.</p>
       </div>
       <div class="card">
-        <h3>🌴 Ukelele</h3>
-        <p>Laagdrempelig en leuk: snel liedjes leren spelen en zingen.</p>
+        <h3>🌴 Ukulele</h3>
+        <p>Individuele lessen en groepslessen voor kinderen en volwassenen.</p>
       </div>
       <div class="card">
-        <h3>📖 Muziektheorie</h3>
-        <p>Noten lezen, ritme en harmonie begrijpen, ook als aanvulling op je instrument.</p>
+        <h3>📖 Muziektheorie en solfège</h3>
+        <p>Voor alle niveaus, ook als voorbereiding op toelatingsexamens van conservatoria.</p>
+      </div>
+      <div class="card">
+        <h3>🎓 ABRSM-examenvoorbereiding</h3>
+        <p>Professionele begeleiding volgens het ABRSM-curriculum, voor praktijk- en theorie-examens.</p>
+      </div>
+      <div class="card">
+        <h3>🎼 Samenspel en ensemblecoaching</h3>
+        <p>Samen musiceren en begeleiding van ensembles.</p>
+      </div>
+      <div class="card">
+        <h3>✍️ Compositie en arrangeren</h3>
+        <p>Vooral voor blaasensembles en orkesten.</p>
       </div>
       <div class="card">
         <h3>Proefles</h3>
         <p>Kennismaken zonder verplichting. Vraag gerust naar de mogelijkheden.</p>
       </div>
+    </div>
+
+    <h3 class="sub">Professionele begeleiding volgens ABRSM</h3>
+    <p>
+      ABRSM staat voor <strong>Associated Board of the Royal Schools of Music</strong>, een internationaal erkende
+      organisatie voor muziekonderwijs en muziekexamens. Leerlingen kunnen zich voorbereiden op praktische
+      instrumentexamens en muziektheorie-examens, afhankelijk van hun niveau en leerdoelen. Mijn lessen richten zich op
+      een stevige muzikale basis, technische ontwikkeling, muzikaal gehoor, notenlezen, expressie en zelfvertrouwen.
+    </p>
+  </section>
+
+  <section id="ervaring">
+    <h2>Opleiding en ervaring</h2>
+    <div class="card">
+      <ul class="facts">
+        <li>Bachelor- en masteropleiding in muziektheorie en orkestdirectie</li>
+        <li>PhD in muziektheorie</li>
+        <li>Muziekopleiding voor Muziekdocent (Amsterdam Conservatorium)</li>
+        <li>Meer dan 27 jaar ervaring in muziekonderwijs en uitvoerende muziekpraktijk</li>
+        <li>Dirigent van harmonieorkesten, fluitist in symfonieorkesten en bassist op pop- en jazzpodia</li>
+        <li>Arrangeur en producer, met eigen muziekproducties</li>
+        <li>Docent muziektheorie, solfège, dwarsfluit, basgitaar, ukulele en piano aan conservatoria en muziekscholen</li>
+        <li>Ruime ervaring met individuele lessen en groepslessen voor kinderen, jongeren en volwassenen</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="fotos">
+    <h2>In beeld</h2>
+    <div class="gallery">
+      <figure>
+        <img src="foto-les.jpg" alt="Ukuleleles bij Prospera Muziek: docent en leerling spelen samen" width="800" height="1000" loading="lazy">
+        <figcaption>Samen musiceren tijdens de les</figcaption>
+      </figure>
+      <figure>
+        <img src="foto-podium.jpg" alt="Yasin Hanonu speelt basgitaar op het podium" width="800" height="1000" loading="lazy">
+        <figcaption>Op het podium</figcaption>
+      </figure>
+      <figure>
+        <img src="foto-ukulele.jpg" alt="Yasin Hanonu met een bas-ukulele" width="800" height="1000" loading="lazy">
+      </figure>
     </div>
   </section>
 
@@ -137,6 +260,16 @@
   © <span id="jaar"></span> Prospera Muziek
 </footer>
 
-<script>document.getElementById('jaar').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('jaar').textContent = new Date().getFullYear();
+  // Toon de foto alleen als het bestand echt bestaat
+  (function () {
+    var img = document.getElementById('yasin-foto');
+    var box = document.getElementById('about');
+    function ok() { box.classList.add('has-photo'); }
+    if (img.complete && img.naturalWidth > 0) { ok(); }
+    else { img.addEventListener('load', ok); }
+  })();
+</script>
 </body>
 </html>
